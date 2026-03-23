@@ -18,6 +18,14 @@ html{
     overflow-x: hidden; 
 }
 
+.br{
+    display: none;
+}
+
+.br2{
+    display: none;
+}
+
 .wrapper{
     margin: 0;
 }
@@ -41,47 +49,54 @@ body{
     left: 0;
     z-index: 100;
     
-    padding: 0 60px;
+    padding: 0 50px;
     font-weight: 600;
     font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .logo{
     margin-right: 100px;
     font-weight: 600;
+    font-size: 18px;
 }
 
 
 .navigation{
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation-tel{
+    display: none;
+    width: 100%;
+    
     align-items: center;
 }
 
 .nav{
     display: flex;
     width: 100%;
-
+    
 }
 
 .nav-item_list{
     display: flex;
     gap: 50px;
-    
+    justify-content: space-between;
+    align-items: center;
 }
 
-.nav-item{
+.nav-item a{
     transition: 1s all ease;
 }
 
-.nav-item:hover{
+.nav-item:hover a{
     text-decoration: underline;
 }
 
-.nav-item:first-child{
-    text-decoration: none;
-}
 
 .nav-btn{
     display: flex;
@@ -201,12 +216,12 @@ body{
 .subplans-head_title{
     font-size: 35px;
     color: #000;
-    
+    font-weight: 800;
 }
 
 .plans-list{
     display: grid;
-    grid-column-gap: 0px;
+    grid-column-gap: 5px;
     grid-row-gap: 0px;
     border-radius: 16px;
     grid-template:
@@ -227,7 +242,8 @@ body{
     font-size: 22px;
     font-weight: 800;
     text-decoration: underline;
-}
+    
+}      
 
 .plan-name:first-child{
     text-decoration: none;
@@ -241,9 +257,6 @@ body{
     border-bottom: 1px solid #fff;
 }
 
-.plan-list_item:last-child{
-    border-bottom: none;
-}
 
 .section-plans_bottom{
     margin-top: 50px;
@@ -287,8 +300,8 @@ body{
 }
 
 .about-us_about{
-    width: 400px;
     display: flex;
+    width: 400px;
     flex-direction: column;
     background-color: #1d1d1da6;
     padding: 25px 30px;
@@ -315,6 +328,7 @@ body{
 
 .about-us_stats{
     display: flex;
+    width: 400px;
     flex-direction: column;
     background-color: #1d1d1da6;
     border: 1px solid #ffffff76;
@@ -346,6 +360,7 @@ body{
     border: 1px solid #ffffff76;
     padding: 25px 30px;
     border-radius: 10px;
+    justify-content: space-between;
 }
 
 .offer-title{
@@ -367,7 +382,7 @@ body{
 
 .read-more_btn{
     display: flex;
-    padding: 20px 20px;
+    padding: 10px 20px;
     font-size: 18px;
     border-radius: 5px;
     background-color: transparent;
@@ -377,7 +392,7 @@ body{
 }
 
 .read-more_btn:hover{
-    padding: 20px 50px;
+    padding: 10px 50px;
 }
 
 .footer{
@@ -387,7 +402,7 @@ body{
     background-color: #1d1d1d;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .footer-title{
@@ -435,4 +450,238 @@ Media
     .section-subplans{
         padding: 50px 50px;
     }
+
+    .section-about_us{
+        padding: 50px 50px;
+    }
+    .main-page_welcome{
+        padding: 0px 50px;
+    }
+    .footer{
+        padding: 25px 50px;
+    }
+    .section-about_us{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }  
+    .about-us_about, .about-us_offer, .about-us_stats{
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 920px){
+    .login-btn{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 850px) {
+      .section-about_us{
+        grid-template-columns: 1fr;
+      }
+}
+
+@media screen and (max-width: 850px) {
+    .plan-name{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 782px){
+    .plan-name{
+        font-size: 18px;
+    }
+    .br{
+        display: flex;
+    }
+    .br2{
+        display: flex;
+    }
+
+    .line{
+        line-height: 2;
+    }
+
+    .navigation-tel{
+        display: flex;
+    }
+    .nav-item_list{
+        width: 100%;
+    }
+    .navigation{
+        display: none;
+    }
+
+    .section-main_page h1{
+        font-size: 35px;
+    }
+
+    .page-welcome_text{
+        font-size: 18px;
+    }
+    .start-btn, .more-info{
+        padding: 15px 30px;
+    }
+}
+
+@media screen and (max-width: 735px){
+    .plans-list{
+        grid-template:
+        "Area. ."
+        "Area-2 Area-3 Area-4"
+        "Area-2 Area-3 Area-4" / 2fr 1fr 1fr 1fr;
+    
+    }
+}
+
+@media screen and (max-width: 600px){
+    .header, .main-page_welcome{
+        padding: 0 25px;
+    }
+    .section-subplans{
+        padding: 50px 25px;
+    }
+
+    .section-about_us{
+        padding: 50px 25px;
+    }
+
+    .footer{
+        padding: 50px 25px;
+    }
+
+    .plans-list{
+        grid-template:
+        "Area. ."
+        "Area-2 Area-3 Area-4"
+        "Area-2 Area-3 Area-4" / 2fr 1fr 1fr 1fr;
+    
+    }
+
+    
+
+}
+
+@media screen and (max-width: 600px){
+    .plans-list{
+        padding: 40px 25px;
+    }
+
+    .section-main_page h1{
+        font-size: 30px;
+    }
+
+    .page-welcome_text{
+        font-size: 18px;
+    }
+    .start-btn, .more-info{
+        padding: 12px 25px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .plans-list{
+        grid-template:
+        "Area. ."
+        "Area-2 Area-3 Area-4"
+        "Area-2 Area-3 Area-4" / 2fr 0.8fr 0.8fr 0.8fr;
+    
+    }
+}
+
+@media screen and (max-width: 500px){
+    .plans-list{
+        grid-template:
+        "Area. ."
+        "Area-2 Area-3 Area-4"
+        "Area-2 Area-3 Area-4" / 1.5fr 0.8fr 0.8fr 0.8fr;
+    
+    }
+
+    .plan-name{
+        font-size: 16px;
+    }
+
+    .plan-list_item{
+        font-size: 14px;
+    }
+
+    .header, .main-page_welcome{
+        padding: 0 25px;
+    }
+    .section-subplans{
+        padding: 25px 25px;
+    }
+
+    .section-about_us{
+        padding: 25px 25px;
+    }
+
+    .footer{
+        padding: 25px 25px;
+    }
+
+    .section-subplans_head{
+        margin-bottom: 25px;
+    }
+
+    .section-plans_bottom{
+        margin-top: 25px;
+    }
+
+
+}
+
+@media screen and (max-width: 450px){
+    .start-btn, .more-info{
+        padding: 10px 18px;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .plans-list {
+        grid-template:
+        "Area. ."
+        "Area-2 Area-3 Area-4"
+        "Area-2 Area-3 Area-4" / 2fr 0.8fr 0.8fr 0.8fr;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .header, .main-page_welcome{
+        padding: 0 15px;
+    }
+    .section-subplans{
+        padding: 50px 15px;
+    }
+
+    .section-about_us{
+        padding: 50px 15px;
+    }
+
+    .footer{
+        padding: 50px 15px;
+    }
+
+    .start-btn, .more-info{
+        padding: 10px 14px;
+    }
+}
+
+@media screen and (max-width: 330px){
+    .header, .main-page_welcome{
+        padding: 0 10px;
+    }
+    .section-subplans{
+        padding: 50px 10px;
+    }
+
+    .section-about_us{
+        padding: 50px 10px;
+    }
+
+    .footer{
+        padding: 50px 10px;
+    }
+
 }
